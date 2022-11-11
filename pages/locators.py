@@ -14,3 +14,6 @@ class ProductPageLocators():
     INFO_ABOUT_PRICE = (By.CSS_SELECTOR, "div div.alert:nth-child(3)")
     PRICE_IN_BASKET = (By.CSS_SELECTOR, "div div.alert:nth-child(3) strong")
     PRICE_PRODUCT = (By.CSS_SELECTOR, "div p.price_color")
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")

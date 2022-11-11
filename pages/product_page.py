@@ -30,3 +30,9 @@ class ProductPage(BasePage):
         in_basket_price = self.browser.find_element(*ProductPageLocators.PRICE_IN_BASKET).text
         product_price = self.browser.find_element(*ProductPageLocators.PRICE_PRODUCT).text
         assert in_basket_price == product_price, "Price not equals price product"
+
+    def guest_should_be_not_see_info_about_what_product_added_to_basket(self):
+        assert self.is_not_element_present(*ProductPageLocators.INFO_ABOUT_ADD_TO_BASKET)
+
+    def guest_should_be_see_disappearance_info_about_add_to_basket(self):
+        assert self.is_disappeared(*ProductPageLocators.INFO_ABOUT_ADD_TO_BASKET)
