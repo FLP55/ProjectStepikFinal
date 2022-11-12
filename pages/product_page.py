@@ -10,7 +10,6 @@ class ProductPage(BasePage):
         self.go_to_push_add_to_basket()
         self.guest_should_be_see_info_about_what_product_added_to_basket()
 
-
     def go_to_push_add_to_basket(self):
         button = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET)
         button.click()
